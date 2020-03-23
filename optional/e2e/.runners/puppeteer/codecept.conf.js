@@ -19,6 +19,7 @@ exports.config = {
       },
       restart: false,
       url: process.env.CODECEPT_BASEURL || "http://localhost:3000",
+      waitForNavigation: [ "networkidle0" ]
     },
   },
   include: {

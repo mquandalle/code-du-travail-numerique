@@ -9,6 +9,8 @@ $ yarn
 
 ## Usage
 
+Make sure the frontend server has NODE_ENV set to `production` (by running `yarn start` and not `yarn dev` @cdt/frontend). Otherwise you will get false negative because webpack hot reload uses never ending websocket so puppeteer / codecept will never detect page load.
+
 ```sh
 # Test the http://localhost:3000
 $ yarn test
@@ -30,6 +32,8 @@ $ export CODECEPT_BASEURL=http://master.code-du-travail-numerique.dev.factory.so
 # Test the http://master.code-du-travail-numerique.dev.factory.social.gouv.fr
 $ yarn test
 ```
+
+[Check the Puppeteer configuration and method list](https://codecept.io/helpers/Puppeteer)
 
 ## Debug
 
