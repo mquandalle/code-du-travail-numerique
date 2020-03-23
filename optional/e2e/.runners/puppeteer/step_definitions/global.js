@@ -44,7 +44,7 @@ Quand("j'attends que les résultats de recherche apparaissent", () => {
 });
 
 Quand("j'attends que le titre de page {string} apparaisse", title => {
-  I.waitForElement(`//h1[contains(., "${title}")]`)
+  I.waitForElement(`//h1[starts-with(., "${title}")]`)
 })
 
 Quand("j'attend que le texte {string} apparaisse", text => {
@@ -65,14 +65,12 @@ Alors("je vois {string} suggestions", (num) => {
   I.seeNumberOfVisibleElements("//ul[@role='listbox']//li", parseInt(num));
 })
 
-Alors("je vois {string} tuiles sous le titre {string}", (num, title) => {
-  I.seeNumberOfVisibleElements(`//header[contains(., "${title}")]/parent::div//li//a`, parseInt(num))
-})
-
 Alors("je vois {string} tuiles sous le {string} {string}", (num, element, title) => {
-  I.seeNumberOfVisibleElements(`//${element}[contains(., "${title}")]/ancestor-or-self::header/parent::div//li//a`, parseInt(num))
+  const container = `ancestor::div`
+  const titleElement = `${element}[starts-with(., "${title}")]`;
+  I.seeNumberOfVisibleElements(`//a[${container}/child::header/child::${titleElement} or ${container}/child::${titleElement}]`, parseInt(num))
 })
 
 Alors("le lien {string} pointe sur {string}", (text, url) => {
-  I.seeElement(`//a[contains(., "${text}") and contains(./@href, "${url}")]`);
+  I.seeElement(`//a[starts-with(., "${text}") and contains(./@href, "${url}")]`);
 });

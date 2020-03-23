@@ -1,6 +1,6 @@
 #language: fr
 
-@search-ccn
+@ccn-search
 Fonctionnalité: Recherche de convention collective
   Pour pouvoir trouver ma convention collective
   En tant que visiteur

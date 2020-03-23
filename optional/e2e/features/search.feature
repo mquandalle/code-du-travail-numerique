@@ -13,7 +13,6 @@ Scénario:
   Quand j'attends que les suggestions apparaissent
   Alors je vois "5" suggestions
 
-
   Quand je clique sur "Rechercher"
   Quand j'attends que les résultats de recherche apparaissent
   Alors je vois "7" tuiles sous le "h3" "Résultats de recherche pour"
