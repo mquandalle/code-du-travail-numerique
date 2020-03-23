@@ -68,7 +68,7 @@ Alors("je vois {string} suggestions", (num) => {
 Alors("je vois {string} tuiles sous le {string} {string}", (num, element, title) => {
   const container = `ancestor::div`
   const titleElement = `${element}[starts-with(., "${title}")]`;
-  I.seeNumberOfVisibleElements(`//a[${container}/child::header/child::${titleElement} or ${container}/child::${titleElement}]`, parseInt(num))
+  I.seeNumberOfVisibleElements(`//li/a[${container}/child::header/child::${titleElement} or ${container}/child::${titleElement}]`, parseInt(num))
 })
 
 Alors("le lien {string} pointe sur {string}", (text, url) => {

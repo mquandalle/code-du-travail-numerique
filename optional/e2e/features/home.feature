@@ -2,7 +2,7 @@
 
 @home
 Fonctionnalité: Page d'acceuil
-  Pour pouvoir trouver une information sur le droit du travai
+  Pour pouvoir trouver une information sur le droit du travail
   En tant que visiteur
   Je veux pouvoir consulter la page d'acceuil
 
@@ -13,11 +13,7 @@ Scénario:
   Alors je vois "Recherchez par mots-clés"
   Alors je vois le bouton "Rechercher"
 
-  Alors je vois "Boîte à outils"
-  Alors je vois "Convention collective"
-  Alors je vois "Préavis de démission"
-  Alors je vois "Salaire brut/net"
-  Alors je vois "Modèles de documents"
+  Alors je vois "4" tuiles sous le "h2" "Boîte à outils"
   Alors le lien "Voir tous les outils" pointe sur "outils"
 
   Alors je vois "Thèmes"
@@ -31,4 +27,5 @@ Scénario:
   Alors je vois "Départ de l'entreprise"
   Alors je vois "Conflits au travail et contrôle de la réglementation"
   Alors le lien "Voir tous les thèmes" pointe sur "themes"
+
   Alors je vois "6" tuiles sous le "h2" "En ce moment"
