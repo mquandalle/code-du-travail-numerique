@@ -65,10 +65,13 @@ Alors("je vois {string} suggestions", (num) => {
   I.seeNumberOfVisibleElements("//ul[@role='listbox']//li", parseInt(num));
 })
 
-Alors("je vois {string} tuiles sous le {string} {string}", (num, element, title) => {
-  const container = `ancestor::div`
-  const titleElement = `${element}[starts-with(., "${title}")]`;
-  I.seeNumberOfVisibleElements(`//li/a[${container}/child::header/child::${titleElement} or ${container}/child::${titleElement}]`, parseInt(num))
+Alors("je vois {string} tuiles sous le texte {string}", (num, title) => {
+  const target = `following-sibling::*//li//a`
+  const textElement = `text()[starts-with(., "${title}")]`;
+  I.seeNumberOfVisibleElements(`
+  //li/a[${container}/header/${titleElement} or ${container}/${titleElement}]
+  //header[*[${textElement}]/${target} | //div/*[text()[starts-with(., "Résultats")]]/${target}
+  `, parseInt(num))
 })
 
 Alors("le lien {string} pointe sur {string}", (text, url) => {
