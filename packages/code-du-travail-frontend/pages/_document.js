@@ -58,6 +58,10 @@ export default class MyDocument extends Document {
             type="text/javascript"
             src="/static/tarteaucitron/initTarteaucitron.js"
           ></script>
+          <script
+            type="text/javascript"
+            src="/static/direflowBundle.js"
+          ></script>
         </Head>
         <body>
           <noscript>
