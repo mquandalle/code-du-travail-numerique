@@ -67,11 +67,8 @@ Alors("je vois {string} suggestions", (num) => {
 
 Alors("je vois {string} tuiles sous le texte {string}", (num, title) => {
   const target = `following-sibling::*//li//a`
-  const textElement = `text()[starts-with(., "${title}")]`;
-  I.seeNumberOfVisibleElements(`
-  //li/a[${container}/header/${titleElement} or ${container}/${titleElement}]
-  //header[*[${textElement}]/${target} | //div/*[text()[starts-with(., "Résultats")]]/${target}
-  `, parseInt(num))
+  const textMatcher = `text()[starts-with(., "${title}")]`;
+  I.seeNumberOfVisibleElements(`//header[*[${textMatcher}]]/${target} | //div/*[${textMatcher}]/${target}`, parseInt(num))
 })
 
 Alors("le lien {string} pointe sur {string}", (text, url) => {
