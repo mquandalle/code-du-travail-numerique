@@ -40,10 +40,10 @@ $ yarn test
 
 ```sh
 # To run one test in debug mode
-$ yarn test --steps --verbose --grep "@apropos"
+$ yarn test --steps --verbose --grep "@apropos" -p pauseOnFail
 ```
 
-Another way to debug is by pausing the tests
+Another way to debug is by pausing the tests at some point
 
 ```feature
 @my_test

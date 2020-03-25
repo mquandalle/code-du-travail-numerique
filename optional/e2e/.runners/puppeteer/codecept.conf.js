@@ -33,6 +33,7 @@ exports.config = {
     steps: ["./step_definitions/global.js"],
   },
   plugins: {
+    pauseOnFail: {},
     screenshotOnFail: {
       enabled: true,
     },

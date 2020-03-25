@@ -12,7 +12,7 @@ Fonctionnalité: Footer
     Alors je vois "Besoin de plus d’information"
     Quand je clique sur "Contacter nos services en région"
     Alors je vois "Contact téléphonique"
-    Quand je cherche "75" dans le champ "search-service"
+    Quand je renseigne "75" dans le champ "search-service"
     Alors le lien "http://idf.direccte.gouv.fr" pointe sur "http://idf.direccte.gouv.fr"
     Quand je ferme la modale
 
