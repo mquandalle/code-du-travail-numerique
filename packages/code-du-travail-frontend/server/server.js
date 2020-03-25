@@ -49,21 +49,23 @@ nextApp.prepare().then(() => {
   const server = new Koa();
   const router = new Router();
 
+  const defaultSrc = [
+    "'self'",
+    "*.travail.gouv.fr",
+    "*.data.gouv.fr",
+    "*.fabrique.social.gouv.fr",
+  ];
+
   if (dev) {
     // handle local csp reportUri endpoint
     server.use(bodyParser());
+    defaultSrc.push("http://127.0.0.1:1337"); // URL + port of the frontend (in dev mode)
   }
   server.use(
     helmet({
       contentSecurityPolicy: {
         directives: {
-          defaultSrc: [
-            "'self'",
-            "http://127.0.0.1:1337",
-            "*.travail.gouv.fr",
-            "*.data.gouv.fr",
-            "*.fabrique.social.gouv.fr",
-          ],
+          defaultSrc,
           scriptSrc: [
             "'self'",
             "'unsafe-inline'",

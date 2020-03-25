@@ -9,7 +9,8 @@ $ yarn
 
 ## Usage
 
-Make sure the frontend server has NODE_ENV set to `production` (by running `yarn start` and not `yarn dev` @cdt/frontend). Otherwise you will get false negative because webpack hot reload uses never ending websocket so puppeteer / codecept will never detect page load.
+In order not to get false negative make sure you wait for the page title to appear before you test a page.
+`"j'attends que le titre de page {string} apparaisse"`
 
 ```sh
 # Test the http://localhost:3000
