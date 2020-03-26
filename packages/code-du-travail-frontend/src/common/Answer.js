@@ -36,7 +36,7 @@ function Answer({
   suptitle,
   title,
 }) {
-  const glossaryItems = useGlossary(children, html);
+  // const glossaryItems = useGlossary(children, html);
   const router = useRouter();
 
   return (
@@ -64,7 +64,7 @@ function Answer({
             </Article>
           )}
           {additionalContent}
-          {glossaryItems}
+          {html}
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}

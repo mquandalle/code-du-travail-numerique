@@ -5,13 +5,14 @@ const matchers = [
   "accord de branche",
   "disposition conventionnelle",
   "dispositions conventionnelles",
+  "congés payés",
 ];
 
 function execOne(htmlContent, match) {
   const re = new RegExp(match, "g");
   return htmlContent.replace(
     re,
-    `<webcomponent-tooltip text="${match}" content="Convention collective tooltip"></webcomponent-tooltip>`
+    `<webcomponent-tooltip text="${match}" content="Notifications Really Long to Trigger Collision"></webcomponent-tooltip>`
   );
 }
 
