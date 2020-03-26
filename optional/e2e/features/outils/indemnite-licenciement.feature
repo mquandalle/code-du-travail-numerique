@@ -12,6 +12,7 @@ Scénario:
   Alors je vois "Indemnité de licenciement"
   Alors je vois "permet d’estimer le montant de l’indemnité minimale de licenciement"
 
+  Quand je clique sur "OK"
   Quand je clique sur "Suivant"
 
 
@@ -39,7 +40,6 @@ Scénario:
 
   Alors je vois "Dates d’entrée et de sortie de l’entreprise"
 
-  Quand je pause le test
   Quand je clique sur "Suivant"
   Alors je vois que bouton "Suivant" est désactivé
   Alors je vois "La date est invalide"
@@ -49,18 +49,19 @@ Scénario:
 
   Quand je renseigne "01/01/2000" dans le champ "la date de notification"
   Alors je vois "La date de notification doit se situer après la date d’entrée"
-  Quand je renseigne "02/01/2020" dans le champ "la date de notification"
+  Quand je renseigne "02012020" dans le champ "la date de notification"
   Alors je ne vois pas "La date de notification doit se situer après la date d’entrée"
 
   Quand je renseigne "01/01/2020" dans le champ "la date de sortie"
   Alors je vois "La date de notification doit se situer avant la date de sortie"
   Quand je renseigne "01/02/2020" dans le champ "la date de sortie"
-  Alors je vois pas "La date de notification doit se situer avant la date de sortie"
+  Alors je ne vois pas "La date de notification doit se situer avant la date de sortie"
 
   Alors je vois "Période d’absence prolongée"
   Quand je choisis "Oui"
   Alors je vois "ne sont pas des périodes à renseigner ci-après"
   Alors je vois "Quels sont le motif et la durée de ces absences"
+  Alors je vois "Supprimer"
   Quand je clique sur "Supprimer"
   Alors je ne vois pas "Quels sont le motif et la durée de ces absences"
 
